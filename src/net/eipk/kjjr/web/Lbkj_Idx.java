@@ -37,7 +37,7 @@ public class Lbkj_Idx {
 		
 		String sql="";
 		Lbkj_DB db=new Lbkj_DB();
-		sql="select count(*) as num from h_message where cid=?";
+		sql="select count(*) as num from h_message where m.cid= ?";
 		int total=SysUtil.StrToInt(""+db.querySingle(sql,cid).get("num"));
 		int pagth=SysUtil.StrToInt(m.getPar("pagth"));
 		int start=SysUtil.getSplitPageStartId(total, 5, pagth);
