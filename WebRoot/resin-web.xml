@@ -1,0 +1,24 @@
+<web-app xmlns="http://caucho.com/ns/resin">
+	<database jndi-name="jdbc/lbkj">
+           <driver type="org.gjt.mm.mysql.Driver">
+             <url>jdbc:mysql://127.0.0.1:3306/lbkj?useUnicode=true&amp;characterEncoding=utf8</url>
+             <user>root</user>
+             <password></password>
+            </driver>
+            <prepared-statement-cache-size>8</prepared-statement-cache-size>
+            <max-connections>20</max-connections>
+            <max-idle-time>30s</max-idle-time>
+  </database>
+  <character-encoding>utf-8</character-encoding>
+  
+  <!-- 
+	<error-page>
+		<error-code>404</error-code>
+		<location>/s/file_not_found.xh</location>
+	</error-page>
+	<error-page exception-type="java.lang.NullPointerException"
+               location="/s/program_error.xh"/>               
+    <error-page exception-type="java.io.FileNotFoundException"
+               location="/s/file_not_found.xh"/>
+   -->
+</web-app>
